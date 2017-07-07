@@ -1,0 +1,60 @@
+$purple: #a00df9;
+$pink: #e3005a;
+$blue: #0df9f6;
+$green: #70e300;
+$yellow: #f9e60d;
+$red-orange: #e32b00;
+
+@-moz-keyframes purpPink {
+    0% {stop-color: $purple}
+    16% {stop-color: $pink}
+    33% {stop-color: $blue}
+    50% {stop-color: $green}
+    67% {stop-color: $yellow}
+    84% {stop-color: $red-orange}
+    100% {stop-color: $purple}
+}
+
+@-webkit-keyframes purpPink {
+    0% {stop-color: $purple}
+    16% {stop-color: $pink}
+    33% {stop-color: $blue}
+    50% {stop-color: $green}
+    67% {stop-color: $yellow}
+    84% {stop-color: $red-orange}
+    100% {stop-color: $purple}
+}
+
+@-moz-keyframes pinkPurp {
+    0% {stop-color: $pink}
+    16% {stop-color: $blue}
+    33% {stop-color: $green}
+    50% {stop-color: $yellow}
+    67% {stop-color: $red-orange}
+    84% {stop-color: $purple}
+    100% {stop-color: $pink}
+}
+
+@-webkit-keyframes pinkPurp {
+    0% {stop-color: $pink}
+    16% {stop-color: $blue}
+    33% {stop-color: $green}
+    50% {stop-color: $yellow}
+    67% {stop-color: $red-orange}
+    84% {stop-color: $purple}
+    100% {stop-color: $pink}
+}
+
+.stop_1 {
+    stop-color: $purple;
+    animation: purpPink 18s;
+    -moz-animation: purpPink 18s infinite;
+    -webkit-animation: purpPink 18s infinite;
+}
+
+.stop_2 {
+    stop-color: $pink;
+    animation: pinkPurp 18s;
+    -moz-animation: pinkPurp 18s infinite;
+    -webkit-animation: pinkPurp 18s infinite;
+}

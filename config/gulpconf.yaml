@@ -1,0 +1,30 @@
+#   Less Config
+Sass:
+  src: './scss/*.scss'
+  dest: './public/css'
+  opts:
+    indentType: space
+    indentWidth: 2
+    includePaths: ['./scss/**/*']
+
+
+#   Upload Config (to S3)
+#   AWS Credentials should be kept in a separate file
+#   but feel free to include them here if you're lazy.
+S3:
+  src: ["./public/**/*"]
+  bucket: "bucket-name-here"
+  prefix: "/this/dir/in/bucket/"
+# Other configs done in the gulpfile because functions
+
+#   Quick Bundle Config
+jsqb:
+  src: './src/*.json'
+  dest: './public/js'
+
+#   TODO Config
+Todo:
+  main: "todo.md"
+  prefix: "todo-"
+  docs: "./docs"
+  json: "./libs/dev/todos"
