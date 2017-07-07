@@ -1,0 +1,12 @@
+<div class="background_4">
+    <div class="container">
+        <div class="row">
+          <div class="vm-wrap vm-wrap-4">
+            <div class="fourth"
+                    <p>This is a fourth section. Playing with fullpage!</p>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>
+{% include "../partials/svg-footer.nunjs" %}

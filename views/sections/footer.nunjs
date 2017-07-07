@@ -1,0 +1,22 @@
+<footer class="animated fadeInDown">
+    <div class="footer">
+        <p><small>MEET THE COLLECTIVE</small></p>
+    </div>
+</footer>
+
+<style type="text/css">
+footer{
+    position: fixed;
+    width: 100%;
+    z-index: 500;
+    bottom: 30px;
+    text-align: center;
+    color: white;
+}
+
+.footer {
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+}
+</style>
