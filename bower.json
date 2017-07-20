@@ -1,12 +1,13 @@
 {
-  "name": "alex",
-  "description": "my site!",
-  "main": "\"\"",
+  "name": "vm-dinner",
   "authors": [
-    "Alexandra Roth <alroth8@gmail.com>"
+    "<developers@vaynermedia.com>"
   ],
-  "license": "MIT",
-  "homepage": "https://github.com/ALTR8/Alex",
+  "description": "The VaynerMedia Dev Team's boilerplate for Node + Express + Nunjucks projects, jumpstarting for LESS, and all of our typical gulp tasks.",
+  "main": "",
+  "moduleType": [],
+  "license": "NA",
+  "homepage": "",
   "private": true,
   "ignore": [
     "**/.*",
@@ -16,7 +17,6 @@
     "tests"
   ],
   "dependencies": {
-    "fullpage.js": "^2.9.4",
-    "jquery": "^3.2.1"
+    "jquery": "^3.1.0"
   }
 }

@@ -1,0 +1,41 @@
+//== Media queries breakpoints
+//
+//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
+
+
+$screen-xxs-min:             	320px;     // really small/old phones
+
+$screen-xs-min:              	480px;     // Extra small screen / phone
+$screen-xs-mid:              	568px;
+
+$screen-sm-min:              	768px;     // Small screen / tablet
+$screen-sm-mid:              	875px;
+
+$screen-md-min:              	992px;     // Medium screen / desktop
+$screen-md-mid:             	1100px;
+
+$screen-lg-min:              	1300px;    // Large screen / wide desktop 
+$screen-xlg-min:             	1400px;    // Large screen / wide desktop 
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max:              	($screen-sm-min - 1);
+$screen-sm-max:              	($screen-md-min - 1);
+$screen-md-max:              	($screen-lg-min - 1);
+
+//  ADD YOUR OWN BREAKS HERE
+//  Try to have the layout dictate the breaks
+//  @media (max-width: @screen-sm-min) {
+/*
+$mq-xxs-max:    ~"(max-width: #{$screen-xxs-min})";
+$mq-xxs-min:    ~"(min-width: #{$screen-xxs-min})";
+$mq-xs-min:     ~"(min-width: #{$screen-xs-min})";
+$mq-xs-mid:     ~"(min-width: #{$screen-xs-mid})";
+$mq-xs-max:     ~"(max-width: #{$screen-xs-max})";
+$mq-sm-min:     ~"(min-width: #{$screen-sm-min})";
+$mq-sm-mid:     ~"(min-width: #{$screen-sm-mid})";
+$mq-sm-max:     ~"(max-width: #{$screen-sm-max})";
+$mq-md-min:     ~"(min-width: #{$screen-md-min})";
+$mq-md-mid:     ~"(min-width: #{$screen-md-mid})";
+$mq-lg-min:     ~"(min-width: #{$screen-lg-min})";
+$mq-xlg-min:    ~"(min-width: #{$screen-xlg-min})";
+*/

@@ -1,0 +1,27 @@
+{% extends "templates/base.nunjs" %}
+
+{% block body_content %}
+<div class="container-fluid">
+    <h1>{{title}}</h1>
+    <table class="table table-monospace">
+        <thead>
+            <tr>
+                <th><h5>Kind</h5></th>
+                <th><h5>File</h5></th>
+                <th><h5>Line</h5></th>
+                <th><h5>Note</h5></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for todo in todos %}
+            <tr class="{{ 'error' if todo.kind=='FIXME' else 'info' }}">
+                <td>{{todo.kind}}</td>
+                <td>{{todo.file}}</td>
+                <td>{{todo.line}}</td>
+                <td>{{todo.text}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

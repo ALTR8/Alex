@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <title>{{site_title}}</title>
+    <link rel="stylesheet" type="text/css" href="{{'css/style.css'|asset}}" />
+    {% block head_content %}{% endblock %}
+    {% include "partials/meta.nunjs" %}
+    {% include "partials/ga.nunjs" %}
+</head>
+<body>
+    {%- block body_content %}{% endblock -%}
+    {%- if livereload %}
+    <script src="http://localhost:35729/livereload.js"></script>
+    {%- endif -%}
+</body>
+</html>

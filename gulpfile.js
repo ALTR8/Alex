@@ -1,3 +1,4 @@
+
 var gulp            = require('gulp')
 ,   _               = require('lodash')
 ,   path            = require('path')
@@ -103,3 +104,67 @@ gulp.task('upload', function() {
         }))
     ;
 });
+
+
+//  ********** xTODOx **************************** //
+
+function todoTransformHeader(kind) {
+    return [
+        '##' + kind + "s"
+    ];
+}
+
+function todoTransformComment(file, line, text, kind) {
+    return [
+        "*  `" + file + " @ " + line + ":`"+ text
+    ];
+}
+
+gulp.task('todo.sass', function() {
+    return gulp.src('./sass/**/*.sass')
+        .pipe(todo({'fileName': gconf.Todo.prefix + 'sass.md'}))
+        .pipe(todo.reporter('markdown', {
+            'fileName': gconf.Todo.prefix + 'sass.md',
+            'transformComment': todoTransformComment,
+            'transformHeader': todoTransformHeader
+        }))
+        .pipe(gulp.dest(gconf.Todo.docs))
+        .pipe(todo.reporter('json', { fileName: 'todo-sass.json' }))
+        .pipe(gulp.dest(gconf.Todo.json))
+    ;
+});
+
+gulp.task('todo.app', function() {
+    return gulp.src('./src/**/*.js')
+        .pipe(todo({'fileName': gconf.Todo.prefix + 'app.md'}))
+        .pipe(todo.reporter('markdown', {
+            'fileName': gconf.Todo.prefix + 'app.md',
+            'transformComment': todoTransformComment,
+            'transformHeader': todoTransformHeader
+        }))
+        .pipe(gulp.dest(gconf.Todo.docs))
+        .pipe(todo.reporter('json', { fileName: 'todo-app.json' }))
+        .pipe(gulp.dest(gconf.Todo.json))
+    ;
+});
+
+gulp.task('todo.server', function() {
+    return gulp.src([
+            './*.js'
+        ,   './routes/**/*.js'
+        ,   './libs/**/*.js'
+        ])
+        .pipe(todo({'fileName': gconf.Todo.prefix + 'server.md'}))
+        .pipe(todo.reporter('markdown', {
+            'fileName': gconf.Todo.prefix + 'server.md',
+            'transformComment': todoTransformComment,
+            'transformHeader': todoTransformHeader
+        }))
+        .pipe(gulp.dest(gconf.Todo.docs))
+        .pipe(todo.reporter('json', { fileName: 'todo-server.json' }))
+        .pipe(gulp.dest(gconf.Todo.json))
+    ;
+});
+
+gulp.task('todo', ['todos']);
+gulp.task('todos', ['todo.less', 'todo.app', 'todo.server']);

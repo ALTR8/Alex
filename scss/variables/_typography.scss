@@ -1,0 +1,67 @@
+//  ========= TYPOGRAPHY ========= //
+
+
+$font-family-sans-serif:            "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-serif:                 Georgia, "Times New Roman", Times, serif;
+$font-family-monospace:             Menlo, Monaco, Consolas, "Courier New", monospace;
+
+
+//  GLOBAL STUFF
+
+//  semantic                        shortcut
+//  Should probably make all #s, but should retro fit?
+$font-weight-thin:      100;        $weight-thin:     $font-weight-thin;
+$font-weight-light:     200;        $weight-light:    $font-weight-light;
+$font-weight-normal:    normal;     $weight-normal:   $font-weight-normal;
+$font-weight-medium:    500;        $weight-medium:   $font-weight-medium;
+$font-weight-bold:      bold;       $weight-bold:     $font-weight-bold;
+$font-weight-heavy:     800;        $weight-heavy:    $font-weight-heavy;
+
+$font-style-normal:     normal;     $style-normal:    $font-style-normal;
+$font-style-italic:     italic;     $style-italic:    $font-style-italic; $italic: $style-italic;
+
+$font-family-base:                  $font-family-sans-serif;
+$font-weight-base:                  normal;
+
+$font-size-base:                    14px !default;
+$font-line-height-base:             1.428571429 !default; // 20/14
+$font-line-height-computed:         floor(($font-size-base * $font-line-height-base)) !default; // ~20px
+
+$font-size-lg:                      ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-line-height-lg:               1.3333333 !default; // extra decimals for Win 8.1 Chrome
+
+$font-size-sm:                      ceil(($font-size-base * 0.85)) !default; // ~12px
+$font-line-height-sm:               1.5 !default;
+
+//  HEADINGS SIZES
+$font-weight-headings:              bold;
+
+$font-size-h1:                      floor(($font-size-base * 2.6)) !default; // ~36px
+$font-line-height-h1:               1.25em;
+
+$font-size-h2:                      floor(($font-size-base * 2.15)) !default; // ~30px
+$font-line-height-h2:               1.25em;
+
+$font-size-h3:                      ceil(($font-size-base * 1.7)) !default; // ~24px
+$font-line-height-h3:               1.25em;
+
+$font-size-h4:                      ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-line-height-h4:               $font-line-height-base;
+
+$font-size-h5:                      $font-size-base !default;
+$font-line-height-h5:               $font-line-height-base;
+
+$font-size-h6:                      ceil(($font-size-base * 0.85)) !default; // ~12px
+$font-line-height-h6:               $font-line-height-base;
+
+//  OTHER FONT THINGS
+
+$font-size-blockquote:              $font-size-h4;
+$font-line-height-blockquote:       1.1em;
+
+//** By default, this inherits from the `<body>`.
+$headings-font-family:    inherit !default;
+$headings-font-weight:    500 !default;
+$headings-line-height:    1.1 !default;
+//** Blockquote font size
+$blockquote-font-size:        ($font-size-base * 1.25) !default;
