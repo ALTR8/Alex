@@ -8,6 +8,7 @@
     {% block head_content %}{% endblock %}
     {% include "partials/meta.nunjs" %}
     {% include "partials/ga.nunjs" %}
+    {% include "partials/home.nunjs" %}
 </head>
 <body>
     {%- block body_content %}{% endblock -%}
