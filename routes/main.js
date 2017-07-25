@@ -4,11 +4,11 @@ var express     = require('express')
 
 router.route('/')
     .get(function(req, res) {
-        res.render('index', { title: 'Alex did a thing'});
+        res.render('index', { title: 'Alexandra Roth'});
     })
 ;
 
-router.route('/powerlifting')
+router.route('/power')
     .get(function(req, res) {
         res.render('power', { title: 'Alex lifts heavy things'});
     })

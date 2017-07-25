@@ -1,1 +1,2 @@
 <h1>Hi! Home page. Will routing work for me?</h1>
+<button><a href="/power">this is a button</a></button>

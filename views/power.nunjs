@@ -1,0 +1,8 @@
+<h1>Hi</h1>
+{{title}}
+<button><a href="/">this is also a button</a></button>
+
+{% block body_content %}
+    <script src="/js/libs/plugins.min.js"></script>
+    <script src="/js/app.min.js"></script>
+{% endblock %}
